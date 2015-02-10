@@ -17,7 +17,7 @@ SECOND:
     3) DOT_VEC can produce "aliasing problems" if we use the same vector twice:
       For example: call dot_vec( n, x, x )
       Posible solutions:
-        ) Compile with -O0                        (poor performance)
+        a) Compile with -O0                        (poor performance)
         b) Compile with: ifort -no-ansi-alias      (poor performance)
         c) Create an specific function             (see third case)
 
