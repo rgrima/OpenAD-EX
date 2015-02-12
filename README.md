@@ -59,3 +59,4 @@ OTHER things:
     type(solver) :: Solver_Concentration_Electrolyte
 
 * Problems with matrices????
+* Important!!!! Do not use "OPTIONAL"
