@@ -26,3 +26,36 @@ THIRD:
       sum_vec( n, x )    => y = SUM( x(i) )
       dot_vec_good( n, x ) => z = SUM( x(i)*x(i) )
   The new function solves the aliasing problem
+
+
+OTHER things:
+* Be carefull with variables defined as intent(in):
+
+    function region(x) result(reg)
+    implicit none
+    integer, intent(in) :: x
+    integer             :: reg
+    reg = ....
+    end function region
+
+    ==> error #6780: A dummy argument with the INTENT(IN) attribute shall not be defined nor become undefined.   [X]
+        X = theArgIStack(theArgIStackoffset)
+
+* Problems when including just some variables from a module:
+    subroutine electronic_conductivity( x, sigma )
+    use variables, only : separator, conductivity_solid, porosity_solid, &
+                          bruggeman
+    implicit none
+    ...
+    end
+
+    ==> Include all module: use variables
+
+* Problems if we use too many diferent types:
+		integer      :: Nx, Nr 
+    integer(8)   :: max_iterations  <=== Problem???
+
+* Problems variable name length.... lenght <= 31
+    type(solver) :: Solver_Concentration_Electrolyte
+
+* Problems with matrices????
