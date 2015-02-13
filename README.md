@@ -60,3 +60,5 @@ OTHER things:
 
 * Problems with matrices????
 * Important!!!! Do not use "OPTIONAL"
+* Problems with array assigments: ¿¿¿???
+    myvec(1:n) = s(1) + s(2) + s(3)
