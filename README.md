@@ -63,3 +63,7 @@ OTHER things:
 * Problems with array assigments: ¿¿¿???
     myvec(1:n) = s(1) + s(2) + s(3)
 * Problems with "type" parameters => myfind ore_opaque_sca . "*.[fF]*"
+* 
+
+* Edit OAD_active.f90 ====> need to set a new function: shapeTest_a3_d3
+* 
